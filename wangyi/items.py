@@ -14,4 +14,5 @@ class WangyiItem(scrapy.Item):
     title = scrapy.Field()
     link = scrapy.Field()
     desc = scrapy.Field()
-    newstitle = scrapy.Field()
+    newstime= scrapy.Field()
+    location = scrapy.Field()
