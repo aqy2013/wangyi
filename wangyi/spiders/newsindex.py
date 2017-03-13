@@ -44,7 +44,7 @@ class NewsindexSpider(scrapy.Spider):
     def detail(self, response):
         temp = WangyiItem()
         # inspect_response(response,self)
-        temp['title'] = response.css('.post_content_main >h1::text').extract_first()
+        temp['title'] = response.css('.post_content_main > h1::text').extract_first()
         newtimestring = response.css('.post_content_main  .post_time_source::text').extract_first()
         temp['newstime'] = re.search('\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}', newtimestring).group()
         # newtimestring1 = response.css('.post_content_main  .post_time_source::text').extract()
